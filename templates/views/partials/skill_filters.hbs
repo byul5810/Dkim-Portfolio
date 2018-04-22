@@ -1,0 +1,8 @@
+<div class="col-sm-12 text-center project-list-controls">
+  <ul class="list-inline">
+    <li class="filter" data-filter="all">All</li>
+    {{#each this}}
+      <li class="filter" data-filter=".{{this.slug}}">{{this.title}}</li>
+    {{/each}}
+  </ul>
+</div>

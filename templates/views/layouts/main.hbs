@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+      Deokgwan Kim | Portfolio
+
+    </title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<!-- <link rel="stylesheet" href="/library/magnific-popup-master/dist/magnific-popup.css"> -->
+		<link href="/styles/site.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+    {{>navbar}}
+    {{>background}}
+    {{{body}}}
+    <!-- projects -->
+    {{>footer}}
+    <script src="/js/jquery/jquery-1.11.3.min.js"></script>
+    <script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+      // Instantiate MixItUp:
+      $('#project-list').mixItUp({
+        load: {
+          sort: 'myorder:asc'
+        }
+      });
+      // animate scroll scrollspy
+      $('a[href^="#"]').click(function(){
+          $('html, body').animate({
+              scrollTop: $( $.attr(this, 'href') ).offset().top-50
+          }, 500);
+          return false;
+      });
+    });
+</script>
+  </body>
+
+
+  </html>

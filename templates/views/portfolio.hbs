@@ -1,0 +1,119 @@
+<div class="col-sm-12 text-center"id="about">
+      <h2>About</h2>
+    </div>
+
+<div class="container top-gap">
+  <div class="row">
+
+        {{#each siteinfo}}
+        {{#if @first}}
+        {{#if profileImage}}
+        <div class="col-sm-6">
+            <img class="img-responsive" src="{{cloudinaryUrl profileImage.image}}" alt=""/>
+          </div>
+          <div class="col-sm-6 about-details">
+            {{/if}}
+        {{#if this.title}}
+          <h2>{{this.title}}</h2>
+        {{/if}}
+        {{#if this.bio}}
+          <p>{{this.bio}}</p>
+        {{/if}}
+        {{#if this.email}}
+          <ul class="list-inline">
+            <li><i class="fa fa-envelope"></i></li>
+            <li><a href="mailto:{{this.email}}?Subject=Hello" target="_blank">{{this.email}}</a></li>
+          </ul>
+        {{/if}}
+        {{#if this.github}}
+          <ul class="list-inline">
+            <li><i class="fa fa-github"></i></li>
+            <li><a href="{{this.github}}" target="_blank">{{this.github}}</a></li>
+          </ul>
+        {{/if}}
+        {{#if this.linkedIn}}
+          <ul class="list-inline">
+            <li><i class="fa fa-linkedin"></i></li>
+            <li><a href="{{this.linkedIn}}" target="_blank">{{this.linkedIn}}</a></li>
+          </ul>
+        {{/if}}
+        {{/if}}
+        {{/each}}
+      </div>
+</div>
+</div>
+</br>
+</br>
+</br>
+</br>
+{{#if skills}}
+<div class="container skills" id="skill">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <h2>Skills</h2>
+      </div>
+      {{#if category}}
+      <div class="col-sm-12 text-center skill-list-controls">
+<ul class="list-inline">
+  <li class="filter" data-filter="all">All</li>
+<!-- category -->
+  {{#each category}}
+    <li class="filter" data-filter=".{{this.slug}}">{{this.title}}</li>
+  {{/each}}
+</ul>
+</div>
+
+{{/if}}
+<!-- skills-->
+<div class="col-sm-12">
+  <div id="project-list" class="row">
+    {{#each skills}}
+    <div class="skill col-md-2 mix {{#each this.skillCategory}}{{this.slug}} {{/each}}  col-md-offset-1 col-sm-4 col-xs-6 cf" data-myorder="{{this.priority}}">
+    <div class="img">
+      <img class="img-responsive" src="{{cloudinaryUrl image.image}}" alt="" />
+      <p class="text-center">
+  {{this.title}}
+</p>
+</div>
+</div>
+      {{/each}}
+</div>
+
+</div>
+</div>
+</div>
+{{/if}}
+<br>
+<br>
+<br>
+{{#if projects}}
+<div class="container projects text-center" id="projects">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+        <h2>Projects</h2>
+    </div>
+      {{#each projects}}
+      <div class="card project-list-hover col-md-4 col-sm-6 col-xs-12"
+data-myorder="{{this.priority}}">
+<div class="hovereffect">
+  <div class="img" style="
+      background: url({{cloudinaryUrl image.image}}) no-repeat center top;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      height: 100%;
+    ">
+    </div>
+<a href="https://github.com/byul5810">
+    <div class="overlay">
+      <h4>{{this.title}}</h4>
+      <p>{{this.snippet}}</p>
+    </div>
+  </a>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
+{{/if}}
