@@ -1,8 +1,19 @@
-# Dkim-Portfolio
+# Portfolio-Website
+- Deokgwan Kim's Portfolio websitre
+- Try on http://www.dkimportfolio.com/
+- For admin side, try on http://www.dkimportfolio.com/keystone/signin
+---
 
- built on top of Node, MongoDB, KeystoneJS. Also uses JQuery, Bootstrap 3.
- https://dkim-pp-4000.herokuapp.com/
+## skils
+- Javascript
+- Keystone (ExpressJS / MongoDB with Mongoose / Handlebars(hbs))
+- CSS / LESS / Bootstrap / UiKIT
  
- For admin, https://dkim-pp-4000.herokuapp.com/login
- 
+## App details
+- Provide Project / About / Skill / Contact sections.
+- MVC Structure used.
+- client page / admin page separated
+- Used Cloudinary api
+- Used Mixitup filter in skill section.
+
  
